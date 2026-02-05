@@ -14,5 +14,8 @@ def user_profile(request,username):
 # def article_detail(request,year,months):
 #     return HttpResponse(f"<h1>Article from {year} - {months}</h1>")
 
+# def article_details(request,**kwargs):
+#     return HttpResponse(f"<h1>Article of the year: {kwargs['year']} - {kwargs['months']}</h1>")
+
 def article_details(request,**kwargs):
-    return HttpResponse(f"<h1>Article of the year: {kwargs['year']} - {kwargs['months']}</h1>")
+    return HttpResponse(f"<h1>Data: {kwargs}</h1>")

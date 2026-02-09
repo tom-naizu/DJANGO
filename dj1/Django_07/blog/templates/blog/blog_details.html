@@ -9,11 +9,15 @@
     <h1>My Templates #2 Blog Filter Page</h1>
 
     {% comment %} Text Filter {% endcomment %}
-    <p><b>Title(Normal):</b>{{post.title}}</p>
-    <p><b>Descriptions(Normal):</b>{{post.descriptions}}</p>
-    
-    <p><b>created_at:</b>{{post.created_at}}</p>
+    {% comment %} <p><b>Title (Normal):</b> {{post.title}}</p> {% endcomment %}
+    <p><b>Title (Normal):</b> {{title}}</p>
+    <p><b>UpperCase:</b> {{title | upper}}</p>
+    <p><b>LowerCase:</b> {{title | lower}}</p>
+    <p><b>Title:</b> {{title | title}}</p>
+    <p><b>Capitilization:</b> {{title | capfirst}}</p>
+    <p><b>TruncateChars:</b> {{title | truncatechars:12}}</p>
+    <p><b>truncatewords:</b> {{title | truncatewords:2}}</p>
+    <p><b>LineBreaks:</b> {{title | linebreaks}}</p>
 
-
-
+    <hr>
 </html>

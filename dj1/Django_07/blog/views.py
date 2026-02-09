@@ -10,6 +10,10 @@ def blog_details(request):
         "created_at" : datetime(2005,12,6,12,46),
         "comment_count" : 5,
         "tag" : ["Django", "Python", "Web_Development"],
+        "price":100,
+        "number":8,
     }
     
+    # return render(request,'blog/blog_details.html',{"post":post})
     return render(request,'blog/blog_details.html',post)
+

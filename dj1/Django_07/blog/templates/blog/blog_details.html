@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#2 Templates </title>
 </head>
+
 <body>
-    <h1>My Templates #2 Blog Filter Page</h1>
+    <h1>My Templates #2 Blog Filter Page</h1>   
 
     {% comment %} Text Filter {% endcomment %}
     {% comment %} <p><b>Title (Normal):</b> {{post.title}}</p> {% endcomment %}
@@ -20,4 +22,24 @@
     <p><b>LineBreaks:</b> {{title | linebreaks}}</p>
 
     <hr>
+    <p><b>Original Pricing:</b>{{price}}</p>
+    <p><b>Original Price(+5):</b>{{price | add:5}}</p>
+
+    {% comment %} DIVISION BY {% endcomment %}
+    {% if number|divisibleby:2%}
+    <p>{{number}} is Even</p>
+    {% else %}
+    <p>{{number}} is Odd</p>
+    {% endif %}
+
+    <hr>
+
+    {% comment %} List Filter {% endcomment %}
+    <p><b>Tags:</b>{{tag}}</p>
+    <p><b>First Tag:</b>{{tag | first}}</p>
+    <p><b>last Tag:</b>{{tag | last}}</p>
+    <p><b>Total Tag:</b>{{tag | length}}</p>
+    <p><b>Slice :</b>{{tag | slice:":2"}}</p>
+    <p><b>Join Tag :</b>{{tag | join:" : "}}</p>
+
 </html>

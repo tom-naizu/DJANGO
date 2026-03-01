@@ -6,7 +6,7 @@ def blog_details(request):
     post = {
         "title" : "My Blog Page ",
         "descriptions" : "This is the web page Of BLOG Details",
-        "author" : None,
+        "author" : "yes",
         "created_at" : datetime(2005,12,6,12,46),
         "comment_count" : 5,
         "tag" : ["Django", "Python", "Web_Development"],

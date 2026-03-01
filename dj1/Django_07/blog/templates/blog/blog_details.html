@@ -8,10 +8,25 @@
 </head>
 
 <body>
-    <h1>My Templates #2 Blog Filter Page</h1>   
+    <h1>My Templates #2 Blog Filter Page</h1>
+    <p><b>Author Available ?: {{author| yesno:"Yes , NO , Maybe"}}</b></p>
+    <p><b>Comment Count ?: {{comment_count}} Comment{{comment_count|pluralize}}</b></p>
+
+    <hr>
 
     {% comment %} Text Filter {% endcomment %}
-    {% comment %} <p><b>Title (Normal):</b> {{post.title}}</p> {% endcomment %}
+    <p><b>Create At : {{created_at}}</b></p>
+    <p><b>Formated Date : {{created_at|date:"D d M Y"}}</b></p>
+    <p><b>Time Only : {{created_at|time:"H:i"}}</b></p>
+
+    {% comment%} Encoding and formatting {% endcomment %}
+    <p><b> Title Encode</b>: {{title|urlencode}}</p>
+    <p><b> Float Format Exmaple:</b>: {{123.343243|floatformat:3}}</p>
+
+    <hr>
+
+    {% comment %} Text Filter {% endcomment %}
+
     <p><b>Title (Normal):</b> {{title}}</p>
     <p><b>UpperCase:</b> {{title | upper}}</p>
     <p><b>LowerCase:</b> {{title | lower}}</p>
@@ -22,10 +37,14 @@
     <p><b>LineBreaks:</b> {{title | linebreaks}}</p>
 
     <hr>
+
+    {% comment %} ADDITION BY {% endcomment %}
+
     <p><b>Original Pricing:</b>{{price}}</p>
     <p><b>Original Price(+5):</b>{{price | add:5}}</p>
 
     {% comment %} DIVISION BY {% endcomment %}
+
     {% if number|divisibleby:2%}
     <p>{{number}} is Even</p>
     {% else %}
@@ -35,6 +54,7 @@
     <hr>
 
     {% comment %} List Filter {% endcomment %}
+
     <p><b>Tags:</b>{{tag}}</p>
     <p><b>First Tag:</b>{{tag | first}}</p>
     <p><b>last Tag:</b>{{tag | last}}</p>

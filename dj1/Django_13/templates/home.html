@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content  %}
+{% load static %}
+<section class="hero">
+</section>
+
+<section class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <img src={% static 'images/post1.jpg' %} alt="Car">
+            <h3>Car Project</h3>
+        <div class="project-card">
+            <img src={% static 'images/post2.jpg' %} height="315px" alt="Car">
+            <h3>Camera Project</h3>
+        </div>
+        <div class="project-card">
+            <img src={% static 'images/post3.jpg' %} height="315px" alt="Car">
+            <h3>Hill View</h3>
+        </div>
+        <div class="project-card">
+            <img src={% static 'images/post4.jpg' %} height="315px" alt="Car">
+            <h3>Cat At the Dark Room</h3>
+        </div>
+    </div>
+</section>
+{% endblock  %}
+
+
+
+
